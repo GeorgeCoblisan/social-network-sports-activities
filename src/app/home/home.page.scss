@@ -1,0 +1,25 @@
+ion-content{
+  --ion-background-color: #5151C6;
+}
+
+.logo {
+  margin-top: 10%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container .span {
+  margin-top: 10%;
+  align-self: center;
+  font-family: 'Circular Std';
+}
+
+.container .button {
+  margin-top: 15%;
+  width: 40%;
+  align-self: center;
+}

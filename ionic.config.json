@@ -1,0 +1,7 @@
+{
+  "name": "social-network-sports-activities",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
