@@ -6,16 +6,28 @@ import { FormsModule } from '@angular/forms';
 import { AccountRoutingModule } from './account-routing.module';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    AccountRoutingModule
+  imports: [CommonModule, FormsModule, IonicModule, AccountRoutingModule],
+  declarations: [
+    LoginComponent,
+    SignupComponent,
+    ChangePasswordComponent,
+    ResetPasswordComponent,
+    ProfileComponent,
+    ChatComponent,
   ],
-  declarations: [LoginComponent, SignupComponent],
-  exports: [LoginComponent, SignupComponent]
+  exports: [
+    LoginComponent,
+    SignupComponent,
+    ChangePasswordComponent,
+    ResetPasswordComponent,
+    ProfileComponent,
+    ChatComponent,
+  ],
 })
 export class AccountModule {}

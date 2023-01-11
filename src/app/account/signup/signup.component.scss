@@ -14,6 +14,44 @@
     font-family: 'Circular Std';
 }
 
-label #rounded{border-radius:15px; }
+.container-inputs{
+    background-color: white;
+    height: 80%;
+    padding-top: 80px;
+    margin-left: auto; 
+    margin-right: auto; 
+}
 
-div #container{width: 300px; margin-left:auto; margin-right: auto; }
+.container-inputs .inputs {
+    width: 300px;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.container-inputs .inputs .input{
+    background-color: #E5E4E2;
+    margin-bottom: 20%;
+    border: 1px solid #E5E4E2;
+    border-radius: 20px;
+    color: black;
+    font-family: 'Circular Std';
+}
+
+.container-inputs .inputs .button{
+    background-color: #5151C6;
+    margin-bottom: 20%;
+    border: 1px solid #5151C6;
+    border-radius: 20px;
+    color: white;
+    width: 300px;
+    height: 50px;
+    font-weight: bold;
+    font-family: 'Circular Std';
+}
+
+.container-inputs .inputs .span{
+    color: black;
+    font-weight: bold;
+    font-family: 'Circular Std';
+    margin-left: 30px;
+}
