@@ -12,7 +12,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule, AccountRoutingModule],
+  imports: [CommonModule, FormsModule, IonicModule, AccountRoutingModule, FormsModule],
   declarations: [
     LoginComponent,
     SignupComponent,

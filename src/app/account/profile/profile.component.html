@@ -1,6 +1,6 @@
 <ion-content class="content" [fullscreen]="true">
   <div class="header">
-    <h3>@usertest</h3>
+    <h3>@ {{ userEmail }}</h3>
     <ion-img src="../../assets/Header background.png" alt="Header-background"></ion-img>
     <ion-img
       src="../../assets/Avatar.png"
@@ -10,7 +10,7 @@
   </div>
 
   <div class="content">
-    <span class="span-1">Sport User 1</span>
+    <span class="span-1">{{ userName }}</span>
     <span class="span-2">Romania, Cluj</span>
     <div class="follow-cards">
       <ion-card>

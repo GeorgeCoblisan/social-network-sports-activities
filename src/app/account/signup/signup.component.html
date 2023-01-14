@@ -11,12 +11,12 @@
 
   <div class="container-inputs">
     <div class="inputs">
-      <ion-input placeholder="Name" type="text" class="input"></ion-input>
-      <ion-input placeholder="Email" type="text" class="input"></ion-input>
-      <ion-input placeholder="Password" type="password" class="input"></ion-input>
-      <ion-input placeholder="Repeat password" type="password" class="input"></ion-input>
-      <button class="button">SIGN IN</button>
-      <span class="span">Already have account? <a>LOG IN</a></span>>
+      <ion-input placeholder="Name" type="text" class="input" [clearInput]="true" [(ngModel)]="name"></ion-input>
+      <ion-input placeholder="Email" type="text" class="input" [clearInput]="true" [(ngModel)]="email"></ion-input>
+      <ion-input placeholder="Password" type="password" [clearInput]="true" class="input" [(ngModel)]="password"></ion-input>
+      <ion-input placeholder="Repeat password" [clearInput]="true" type="password" class="input" [(ngModel)]="repeatPassword"></ion-input>
+      <button class="button" (click)="signIn()">SIGN IN</button>
+      <span class="span">Already have account? <a [routerLink]="['/account/login']">LOG IN</a></span>>
     </div>
   </div>
 </ion-content>
