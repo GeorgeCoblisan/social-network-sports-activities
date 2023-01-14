@@ -1,14 +1,15 @@
 import { EventType } from "./event-type.model";
+import {Location} from "./location";
 
 export interface Event {
+    id: number;
     name: string;
     image: string;
-    date: number;
+    date: Date;
     type: EventType;
-    location: string;
+    location?: Location;
     comments: number;
     likes: number;
     totalSeats: number;
     occupiedSeats: number;
-    coordinates: string;
 }

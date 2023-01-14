@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { SocialEventsRoutingModule } from './social-events-routing.module';
 import { CreateEventComponent } from './create-event/create-event.component';
@@ -15,9 +15,10 @@ import { EventsMapComponent } from './events-map/events-map.component';
 import { EventsRewardComponent } from './events-reward/events-reward.component';
 import { EventsSearchComponent } from './events-search/events-search.component';
 import { EventForumComponent } from './event-forum/event-forum.component';
+import {GoogleMapsModule} from "@angular/google-maps";
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule, SocialEventsRoutingModule],
+  imports: [CommonModule, FormsModule, IonicModule, SocialEventsRoutingModule, GoogleMapsModule, ReactiveFormsModule],
   declarations: [
     CreateEventComponent,
     EventDetailsComponent,
@@ -31,6 +32,7 @@ import { EventForumComponent } from './event-forum/event-forum.component';
     EventsSearchComponent,
     EventForumComponent,
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
     CreateEventComponent,
     EventDetailsComponent,
