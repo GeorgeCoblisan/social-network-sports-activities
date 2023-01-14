@@ -4,15 +4,19 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
     path: 'account',
-    loadChildren: () => import('./account/account.module').then( m => m.AccountModule)
+    loadChildren: () => import('./account/account.module').then(m => m.AccountModule)
   },
   {
     path: 'events',
-    loadChildren: () => import('./social-events/social-events.module').then( m => m.SocialEventsModule)
+    loadChildren: () => import('./social-events/social-events.module').then(m => m.SocialEventsModule)
+  },
+  {
+    path: 'select_category',
+    loadChildren: () => import('./selectCategory/selectCategory.module').then(m => m.SelectCategoryModule)
   },
   {
     path: '',
