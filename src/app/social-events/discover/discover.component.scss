@@ -1,0 +1,64 @@
+ion-content {
+  --ion-background-color: white;
+}
+
+.caroussel {
+  padding: 0 2.5%;
+
+  &__images-container{
+    display: grid;
+    gap: 10px;
+    grid-auto-flow: column;
+
+    position: relative;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    margin-bottom: 10px;
+    
+  }
+
+  &__header {
+    margin-bottom: 10px;
+
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    color: #212121;
+  }
+
+  &__image{
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+
+    filter: brightness(60%);
+  }
+
+  &__image-wrapper{
+    position: relative;
+
+    width: 150px;
+    height: 100px;
+  }
+
+  &__sport-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    z-index: 1;
+
+    height: 100%;
+    width: 100%;
+
+    color: white;
+  }
+}

@@ -1,0 +1,24 @@
+.search-bar {
+  background-color: white;
+  width: 100%;
+  padding: 12px 20px;
+  color: black;
+
+  &__input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 8px 14px;
+    height: 37px;
+    width: 283px;
+    background: #F3F5F7;
+    border-radius: 30px;
+  }
+
+  &__input{
+    border: none;
+    background-color: #F3F5F7;
+    margin-left: 10px;
+  }
+}

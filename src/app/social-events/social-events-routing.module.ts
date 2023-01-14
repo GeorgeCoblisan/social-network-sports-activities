@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { CreateEventComponent } from './create-event/create-event.component';
+import { Discover } from './discover/discover.component';
 import { EventDetailsComponent } from './event-details/event-details.component';
 import { EventForumComponent } from './event-forum/event-forum.component';
 import { EventsActivityComponent } from './events-activity/events-activity.component';
@@ -12,6 +13,7 @@ import { EventsJoinComponent } from './events-join/events-join.component';
 import { EventsMapComponent } from './events-map/events-map.component';
 import { EventsRewardComponent } from './events-reward/events-reward.component';
 import { EventsSearchComponent } from './events-search/events-search.component';
+import { SelectCategory } from './selectCategory/selectCategory.component';
 
 
 const routes: Routes = [
@@ -58,6 +60,14 @@ const routes: Routes = [
   {
     path: 'event-forum',
     component: EventForumComponent,
+  },
+  {
+    path: 'select-category',
+    component: SelectCategory,
+  },
+  {
+    path: 'discover',
+    component: Discover,
   },
 ];
 

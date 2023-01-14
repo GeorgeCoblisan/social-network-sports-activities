@@ -1,0 +1,54 @@
+.events {
+    background-color: white;
+    height: auto;
+}
+
+ion-content {
+    --ion-background-color: white;
+}
+
+.content ion-card {
+    --background: #f4f5f8;
+    --color: black;
+    height: 250px;
+    margin-top: 0px;
+}
+
+.content ion-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .row-2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.content ion-card-title {
+    --color: black;
+    font-size: large;
+    padding-top: 1%;
+    text-align: start;
+    padding-left: 3%;
+    padding-bottom: 2%;
+}
+
+.content ion-card-subtitle {
+    --color: black;
+    font-size: medium;
+    text-align: end;
+    padding-top: 2%;
+    padding-right: 3%;
+    padding-bottom: 2%;
+}
+
+.content ion-card-content {
+    --color: black;
+    text-align: center;
+    padding-top: 3%;
+}
+
+.content .event-image {
+    width: 100%;
+    height: 60%;
+}

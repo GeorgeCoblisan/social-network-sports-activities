@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content" [fullscreen]="true">
+  <header class="top-header">
+    <span class="top-header__title">SportGroup</span>
+    <img class="top-header__image" src="../../assets/sports-logo.png" alt="sports background" />
+    <svg src="../../assets/shapes.svg"></svg>
+  </header>
+  <div class="sports">
+    <span class="sports__question">What sports are you interested in?</span>
+    <div class="sports__images">
+      <div class="sports__image-wrapper" (click)="selectCategory('Basketball')">
+        <img class="sports__image-effect"src="../../assets/effect.png" alt="effect">
+        <img class="sports__image" src="../../assets/basketball.webp" alt="baksetball">
+        <span class="sports__name">Basketball</span>
+      </div>
+      <div class="sports__image-wrapper" (click)="selectCategory('Tennis')">
+        <img class="sports__image-effect"src="../../assets/effect.png" alt="effect">
+        <img class="sports__image" src="../../assets/tennis.webp" alt="tennis">
+        <span class="sports__name">Tennis</span>
+      </div>
+      <div class="sports__image-wrapper" (click)="selectCategory('Running')">
+        <img class="sports__image-effect"src="../../assets/effect.png" alt="effect">
+        <img class="sports__image" src="../../assets/running.jpg" alt="running">
+        <span class="sports__name">Running</span>
+      </div>
+      <div class="sports__image-wrapper" (click)="selectCategory('Football')">
+        <img class="sports__image-effect"src="../../assets/effect.png" alt="effect">
+        <img class="sports__image" src="../../assets/football.jpg" alt="football">
+        <span class="sports__name">Football</span>
+      </div>
+    </div>
+    <span class="sports__motto">JOIN - CREATE - CONNECT</span>
+    <button class="sports__button" (click)="navigateToFeed()">EXPLORE NOW</button>
+  </div>
+</ion-content>
