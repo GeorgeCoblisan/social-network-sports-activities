@@ -17,7 +17,7 @@ import { EventsSearchComponent } from './events-search/events-search.component';
 import { EventForumComponent } from './event-forum/event-forum.component';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule, SocialEventsRoutingModule],
+    imports: [CommonModule, FormsModule, IonicModule, SocialEventsRoutingModule],
   declarations: [
     CreateEventComponent,
     EventDetailsComponent,

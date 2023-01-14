@@ -1,3 +1,14 @@
-<p>
-  events-calendar works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Events calendar
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-datetime
+    [(ngModel)]="date"
+    [max]="maxDate"
+  >
+  </ion-datetime>
+</ion-content>
