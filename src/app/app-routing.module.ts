@@ -19,6 +19,10 @@ const routes: Routes = [
     loadChildren: () => import('./selectCategory/selectCategory.module').then(m => m.SelectCategoryModule)
   },
   {
+    path: 'discover',
+    loadChildren: () => import('./discover/discover.module').then(m => m.DiscoverModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
