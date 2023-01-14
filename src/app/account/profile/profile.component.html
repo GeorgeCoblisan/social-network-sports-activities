@@ -1,3 +1,11 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content class="content" [fullscreen]="true">
   <div class="header">
     <h3>@ {{ userEmail }}</h3>
@@ -36,6 +44,10 @@
         <ion-card-content>16/12/2020</ion-card-content>
       </ion-card>
     </div>
+  </div>
+
+  <div class="navbar">
+    <app-navbar></app-navbar>
   </div>
 
 </ion-content>

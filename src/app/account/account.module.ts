@@ -10,9 +10,17 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ChatComponent } from './chat/chat.component';
+import { NavbarModule } from '../navbar/navbar.module';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule, AccountRoutingModule, FormsModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    AccountRoutingModule,
+    FormsModule,
+    NavbarModule,
+  ],
   declarations: [
     LoginComponent,
     SignupComponent,

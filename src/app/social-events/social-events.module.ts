@@ -15,9 +15,19 @@ import { EventsMapComponent } from './events-map/events-map.component';
 import { EventsRewardComponent } from './events-reward/events-reward.component';
 import { EventsSearchComponent } from './events-search/events-search.component';
 import { EventForumComponent } from './event-forum/event-forum.component';
+import { SearchBar } from './searchBar/searchBar.component';
+import { Discover } from './discover/discover.component';
+import { SelectCategory } from './selectCategory/selectCategory.component';
+import { NavbarModule } from '../navbar/navbar.module';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule, SocialEventsRoutingModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    SocialEventsRoutingModule,
+    NavbarModule,
+  ],
   declarations: [
     CreateEventComponent,
     EventDetailsComponent,
@@ -30,6 +40,9 @@ import { EventForumComponent } from './event-forum/event-forum.component';
     EventsRewardComponent,
     EventsSearchComponent,
     EventForumComponent,
+    SearchBar,
+    Discover,
+    SelectCategory,
   ],
   exports: [
     CreateEventComponent,
@@ -43,6 +56,9 @@ import { EventForumComponent } from './event-forum/event-forum.component';
     EventsRewardComponent,
     EventsSearchComponent,
     EventForumComponent,
+    SearchBar,
+    Discover,
+    SelectCategory,
   ],
 })
 export class SocialEventsModule {}
