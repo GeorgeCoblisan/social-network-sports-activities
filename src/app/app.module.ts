@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageModule } from './home/home.module';
 import { AccountModule } from './account/account.module';
+import { SelectCategoryModule } from './selectCategory/selectCategory.module';
+import { DiscoverModule } from './discover/discover.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +19,8 @@ import { AccountModule } from './account/account.module';
     AppRoutingModule,
     HomePageModule,
     AccountModule,
+    SelectCategoryModule,
+    DiscoverModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
