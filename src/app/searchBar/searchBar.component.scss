@@ -1,4 +1,8 @@
 .search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   background-color: white;
   width: 100%;
   padding: 12px 20px;
@@ -19,5 +23,11 @@
     border: none;
     background-color: #F3F5F7;
     margin-left: 10px;
+
+    color: black;
+
+    &:focus{
+      outline: none;
+    }
   }
 }
