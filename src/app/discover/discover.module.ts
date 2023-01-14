@@ -6,9 +6,10 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { Discover } from './discover.component';
 import { DiscoverRoutingModule } from './discover-routing.module';
+import { Navbar } from '../navbar/navbar.component';
 
 @NgModule({
-  declarations: [Discover],
+  declarations: [Discover, Navbar],
   imports: [
     CommonModule,
     FormsModule,
