@@ -20,6 +20,7 @@ import { SearchBar } from './searchBar/searchBar.component';
 import { Discover } from './discover/discover.component';
 import { SelectCategory } from './selectCategory/selectCategory.component';
 import { NavbarModule } from '../navbar/navbar.module';
+import {FullCalendarModule} from "@fullcalendar/angular";
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { NavbarModule } from '../navbar/navbar.module';
     ReactiveFormsModule,
     GoogleMapsModule,
     NavbarModule,
+    FullCalendarModule,
   ],
   declarations: [
     CreateEventComponent,
