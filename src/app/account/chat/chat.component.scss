@@ -4,6 +4,7 @@ ion-icon[name="arrow-back"]{
 
 ion-card {
   display: flex;
+  justify-content: space-between;
 }
 
 ion-card-content p {
@@ -28,10 +29,18 @@ ion-card-content p {
 .type-message{
   display: flex;
   padding: 0 20px;
+  margin-bottom: -0;
+  width: 100%;
 }
 
 .type-message ion-icon {
   margin: auto 0;
   width: 30px;
   height: 30px;
+}
+
+.bottom-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
