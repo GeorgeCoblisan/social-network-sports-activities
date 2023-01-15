@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: () => import('./social-events/social-events.module').then(m => m.SocialEventsModule)
   },
   {
+    path:'activity',
+    loadChildren: () => import('./activity/activity.module').then(m => m.ActivityModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'

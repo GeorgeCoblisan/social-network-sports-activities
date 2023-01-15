@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageModule } from './home/home.module';
 import { AccountModule } from './account/account.module';
+import { ActivityModule } from './activity/activity.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +18,7 @@ import { AccountModule } from './account/account.module';
     AppRoutingModule,
     HomePageModule,
     AccountModule,
+    ActivityModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
