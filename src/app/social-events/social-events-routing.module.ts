@@ -46,7 +46,7 @@ const routes: Routes = [
     component: EventDetailsComponent,
   },
   {
-    path: 'create-event',
+    path: 'create',
     component: CreateEventComponent,
   },
   {

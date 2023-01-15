@@ -1,3 +1,21 @@
-<p>
-  events-map works!
-</p>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Events </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <h3>Open events in Cluj Napoca</h3>
+  <p>Use our map to find much faster your interested activities. Navigate and join to which event you want.</p>
+  <google-map #myGoogleMap height="430px" width="100%" [zoom]="zoom" [center]="center" [options]="options">
+
+    <map-marker #markerElem="mapMarker" *ngFor="let marker of markers" [position]="marker.position"
+                [title]="marker.title" [options]="marker.options" (mapClick)="openInfo(markerElem, marker)">
+    </map-marker>
+    <map-info-window>{{ infoContent }}
+      <ion-button replaceUrl="true" [routerLink]="[redirectUrl]" [queryParams]="queryParams">JOIN</ion-button>
+    </map-info-window>
+  </google-map>
+</ion-content>

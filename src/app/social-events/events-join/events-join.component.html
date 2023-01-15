@@ -1,3 +1,46 @@
-<p>
-  events-join works!
-</p>
+<ion-content [fullscreen]="true" class="content">
+  <div class="logo">
+    <ion-img alt="Sports-logo" src="../../assets/sports-logo.png"></ion-img>
+    <ion-img
+      alt="Effect"
+      class="effect-image"
+      src="../../assets/effect.png"
+    ></ion-img>
+    <ion-card class="ion-text-center h-40">
+      <h2>{{event.name}}</h2>
+    </ion-card>
+  </div>
+
+  <div style="display: flex !important; justify-content: center; flex-direction: column">
+    <ion-card class="description-event">
+      <div class="detail-container">
+        <p>Event Date</p>
+        <p>{{event.date | date: 'short'}}</p>
+      </div>
+    </ion-card>
+    <ion-card class="description-event">
+      <div class="detail-container">
+        <p>Remaining spots</p>
+        <p>{{event.totalSeats - event.occupiedSeats}}</p>
+      </div>
+    </ion-card>
+    <div class="ion-text-center description-text">
+      Ready to ENJOY THE FUN AT THE GAME
+    </div>
+      <button class="button">JOIN EVENT</button>
+    <div class="ion-text-center description-text-2">
+      {{event.occupiedSeats}} participants already
+    </div>
+    <ion-card class="grey-card">
+      <ion-img src="/assets/Challenge title.png" class="img-50"></ion-img>
+      <div class="grey-card-text">
+        <ng-container *ngIf="event.location">
+        Adresa: {{event.location.address}}
+        </ng-container>
+        Tipul sportului: {{EventType[event.type]}}
+      </div>
+    </ion-card>
+
+  </div>
+</ion-content>
+

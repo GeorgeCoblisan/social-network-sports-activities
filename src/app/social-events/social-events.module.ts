@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 import { SocialEventsRoutingModule } from './social-events-routing.module';
 import { CreateEventComponent } from './create-event/create-event.component';
@@ -21,7 +22,15 @@ import { SelectCategory } from './selectCategory/selectCategory.component';
 import { NavbarModule } from '../navbar/navbar.module';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule, SocialEventsRoutingModule, NavbarModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    SocialEventsRoutingModule,
+    ReactiveFormsModule,
+    GoogleMapsModule,
+    NavbarModule,
+  ],
   declarations: [
     CreateEventComponent,
     EventDetailsComponent,
@@ -38,6 +47,7 @@ import { NavbarModule } from '../navbar/navbar.module';
     Discover,
     SelectCategory,
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
     CreateEventComponent,
     EventDetailsComponent,

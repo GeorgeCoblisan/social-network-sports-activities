@@ -1,53 +1,68 @@
-import { Injectable } from '@angular/core';
-import { EventType } from '../models/event-type.model';
+import { Injectable } from "@angular/core";
 
+import { EventType } from "../models/event-type.model";
 import { Event } from '../models/event.model';
 
 @Injectable({ providedIn: 'root' })
 export class EventService {
+
   events: Event[] = [
     {
-      name: 'Campionatul de fotbal',
-      image: '',
-      date: Date.now(),
-      type: EventType.Football,
+      id: 1,
+      name: 'Event 1',
+      image: 'string',
+      date: new Date(),
+      type: EventType.Running,
       user: {
         name: 'George',
         email: 'george@gmail.com',
         password: 'george',
       },
-      location: 'Cluj-Napoca',
-      comments: 20,
-      likes: 30,
-      totalSeats: 100,
-      occupiedSeats: 50,
-      latitude: '',
-      longitude: '',
-    },
-      {
-        name: 'Campionatul de fotbal',
-        image: '',
-        date: Date.now(),
-        type: EventType.Football,
-        user: {
-          name: 'ANDREI',
-          email: 'george@gmail.com',
-          password: 'george',
-        },
-        location: 'Cluj-Napoca',
-        comments: 20,
-        likes: 30,
-        totalSeats: 100,
-        occupiedSeats: 50,
-        latitude: '',
-        longitude: '',
+      location: {
+        address: 'BT Arena',
+        latitude: 46.767052,
+        longitude: 23.570519
       },
+      comments: 0,
+      likes: 5,
+      totalSeats: 12,
+      occupiedSeats: 5,
+    },
+    {
+      id: 2,
+      name: 'Event 2',
+      image: 'string',
+      date: new Date(),
+      user: {
+        name: 'George',
+        email: 'george@gmail.com',
+        password: 'george',
+      },
+      location: {
+        address: 'Parcul sala sporturilor',
+        latitude: 46.765468,
+        longitude: 23.561321
+      },
+      type: EventType.Football,
+      comments: 0,
+      likes: 5,
+      totalSeats: 12,
+      occupiedSeats: 5,
+    }
   ];
 
   selectedCategory!: EventType;
 
-  getEvents(): Event[] {
+  save(event: Event): void {
+    this.events.push(event);
+  }
+
+  getAll(): Event[] {
     return this.events;
+  }
+
+  findById(id: number): Event {
+    return this.events.filter(it => it.id == id)[0];
   }
 
   getCategory(): EventType {

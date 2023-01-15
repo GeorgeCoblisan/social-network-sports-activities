@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {EventService} from "../services/event.service";
+import {Event} from "../models/event.model";
+import { EventType } from '../models/event-type.model';
 
 @Component({
   selector: 'app-events-join',
@@ -7,8 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsJoinComponent implements OnInit {
 
-  constructor() { }
+  readonly EventType = EventType;
 
-  ngOnInit() {}
+  event!: Event;
+
+  constructor(private readonly activatedRoute: ActivatedRoute,
+              private readonly eventService: EventService) { }
+
+  ngOnInit() {
+    this.activatedRoute.queryParams.subscribe(params => {
+      let id = params['id'];
+      this.event = this.eventService.findById(id as number);
+    });
+  }
 
 }
