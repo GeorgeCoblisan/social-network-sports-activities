@@ -34,6 +34,19 @@ export class EventsRewardComponent implements OnInit {
       this.event.user.push(this.user);
       this.user.events?.push(this.event);
       this.user.xp! += this.xp;
+
+      if (this.user.xp! > 300) {
+        this.user.level = 2;
+      }
+      else if (this.user.xp! > 600) {
+        this.user.level = 3;
+      }
+      if (this.user.xp! > 1000) {
+        this.user.level = 4;
+      }
+      if (this.user.xp! > 1500) {
+        this.user.level = 3;
+      }
     });
   }
 }

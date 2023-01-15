@@ -42,6 +42,8 @@ export class SignupComponent implements OnInit {
           name: this.name,
           email: this.email,
           password: this.password,
+          xp: 0,
+          level: 1,
         };
         if (this.accountService.signUp(user)) {
           this.router.navigate(['/account/login']);

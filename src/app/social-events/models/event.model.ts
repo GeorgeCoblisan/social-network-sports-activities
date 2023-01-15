@@ -6,7 +6,7 @@ export interface Event {
   id: number;
   name: string;
   image: string;
-  date: Date;
+  date: number;
   type: EventType;
   user: User[];
   location?: Location;

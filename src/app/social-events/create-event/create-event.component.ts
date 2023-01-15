@@ -8,6 +8,7 @@ import { EventService } from '../services/event.service';
 import { Location } from '../models/location';
 import { LocationService } from '../services/location.service';
 import { AccountService } from 'src/app/account/services/account.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-event',
@@ -26,7 +27,8 @@ export class CreateEventComponent implements OnInit {
     private readonly eventService: EventService,
     private readonly locationService: LocationService,
     private toastController: ToastController,
-    private accountService: AccountService
+    private accountService: AccountService,
+    private router: Router,
   ) {}
 
   ngOnInit() {
@@ -50,7 +52,7 @@ export class CreateEventComponent implements OnInit {
         id: Math.random(),
         name: this.eventFormGroup.get('name').value,
         image: 'string',
-        date: this.eventDate,
+        date: this.eventDate as unknown as number,
         type: this.eventFormGroup.get('type').value,
         user: [this.accountService.getUser(),],
         location: this.eventFormGroup.get('location').value,
@@ -60,6 +62,7 @@ export class CreateEventComponent implements OnInit {
         occupiedSeats: 0,
       };
       this.eventService.save(event);
+      this.router.navigate(['/events/select-category']);
       console.log(this.eventService.getAll());
     } else {
       const toast = await this.toastController.create({

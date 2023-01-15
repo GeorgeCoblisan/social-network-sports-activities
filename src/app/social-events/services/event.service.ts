@@ -11,7 +11,7 @@ export class EventService {
       id: 1,
       name: 'Event 1',
       image: 'string',
-      date: new Date(),
+      date: 1673697715000,
       type: EventType.Running,
       user: [{
         name: 'George',
@@ -32,7 +32,7 @@ export class EventService {
       id: 2,
       name: 'Event 2',
       image: 'string',
-      date: new Date(),
+      date: 1674043315000,
       user: [{
         name: 'George',
         email: 'george@gmail.com',
