@@ -13,11 +13,11 @@ export class EventService {
       image: 'string',
       date: new Date(),
       type: EventType.Running,
-      user: {
+      user: [{
         name: 'George',
         email: 'george@gmail.com',
         password: 'george',
-      },
+      }],
       location: {
         address: 'BT Arena',
         latitude: 46.767052,
@@ -33,11 +33,11 @@ export class EventService {
       name: 'Event 2',
       image: 'string',
       date: new Date(),
-      user: {
+      user: [{
         name: 'George',
         email: 'george@gmail.com',
         password: 'george',
-      },
+      }],
       location: {
         address: 'Parcul sala sporturilor',
         latitude: 46.765468,

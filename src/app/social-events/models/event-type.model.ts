@@ -1,6 +1,6 @@
 export enum EventType {
-    Football,
-    Basketball,
-    Tennis,
-    Running,
+    Football = "Football",
+    Basketball = "Basketball",
+    Tennis = "Tennis",
+    Running = "Running",
 }

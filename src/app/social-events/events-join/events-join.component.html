@@ -1,3 +1,11 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content [fullscreen]="true" class="content">
   <div class="logo">
     <ion-img alt="Sports-logo" src="../../assets/sports-logo.png"></ion-img>
@@ -27,7 +35,7 @@
     <div class="ion-text-center description-text">
       Ready to ENJOY THE FUN AT THE GAME
     </div>
-      <button [disabled]="event.totalSeats - event.occupiedSeats === 0" class="button">JOIN EVENT</button>
+      <button [disabled]="event.totalSeats - event.occupiedSeats === 0" class="button" (click)="joinEvent(event)">JOIN EVENT</button>
     <div class="ion-text-center description-text-2">
       {{event.occupiedSeats}} participants already
     </div>

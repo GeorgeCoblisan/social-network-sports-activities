@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
+import { EventType } from '../models/event-type.model';
 
 import { EventService } from '../services/event.service';
 
@@ -25,7 +26,20 @@ export class SelectCategory {
 
   async navigateToFeed(): Promise<void> {
     if (this.category) {
-      this.router.navigate(['/events/feed']);
+      const type: EventType = Object.values(EventType).find(val => val === this.category)!;
+      if (this.eventService.getAll().filter((event) => event.type === type).length > 0) {
+        this.router.navigate(['/events/feed']);
+      }
+      else {
+        const toast = await this.toastController.create({
+          message: 'We do not have events for this category at the moment!',
+          duration: 1500,
+          position: 'bottom',
+          color: 'danger',
+        });
+  
+        await toast.present();
+      }
     }
     else {
       const toast = await this.toastController.create({
@@ -37,5 +51,9 @@ export class SelectCategory {
 
       await toast.present();
     }
+  }
+
+  navigateToMap(): void {
+    this.router.navigate(['/events/map']);
   }
 }
