@@ -118,3 +118,7 @@ h2 {
   margin-right: auto;
   margin-left: auto;
 }
+
+button:disabled{
+  opacity: 0.3;
+}

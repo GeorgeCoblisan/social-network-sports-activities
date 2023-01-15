@@ -1,9 +1,9 @@
-import { Injectable } from "@angular/core";
+import {Injectable} from "@angular/core";
 
 import { EventType } from "../models/event-type.model";
 import { Event } from '../models/event.model';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({providedIn: 'root'})
 export class EventService {
 
   events: Event[] = [
@@ -26,7 +26,7 @@ export class EventService {
       comments: 0,
       likes: 5,
       totalSeats: 12,
-      occupiedSeats: 5,
+      occupiedSeats: 12,
     },
     {
       id: 2,
