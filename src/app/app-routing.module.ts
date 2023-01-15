@@ -19,6 +19,10 @@ const routes: Routes = [
     loadChildren: () => import('./activity/activity.module').then(m => m.ActivityModule)
   },
   {
+    path:'forum',
+    loadChildren: () => import('./forum/forum.module').then(m => m.ForumModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
