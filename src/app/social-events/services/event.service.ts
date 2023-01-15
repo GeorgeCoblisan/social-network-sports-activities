@@ -11,13 +11,13 @@ export class EventService {
       id: 1,
       name: 'Event 1',
       image: 'string',
-      date: new Date(),
+      date: 1673697715000,
       type: EventType.Running,
-      user: {
+      user: [{
         name: 'George',
         email: 'george@gmail.com',
         password: 'george',
-      },
+      }],
       location: {
         address: 'BT Arena',
         latitude: 46.767052,
@@ -32,12 +32,12 @@ export class EventService {
       id: 2,
       name: 'Event 2',
       image: 'string',
-      date: new Date(),
-      user: {
+      date: 1674043315000,
+      user: [{
         name: 'George',
         email: 'george@gmail.com',
         password: 'george',
-      },
+      }],
       location: {
         address: 'Parcul sala sporturilor',
         latitude: 46.765468,

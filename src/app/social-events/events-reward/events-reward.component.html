@@ -1,11 +1,11 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Congrats </ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
 <ion-content>
   <ion-grid>
     <ion-row class="ion-justify-content-center top-100">
@@ -25,7 +25,7 @@
     <ion-row>
       <ion-col size="4"></ion-col>
       <ion-col size="4" class="ion-text-center">
-        <p>You get 500 point. Share them with friends!</p>
+        <p>You get {{ xp }} point. Share them with friends!</p>
       </ion-col>
       <ion-col size="4"></ion-col>
     </ion-row>
@@ -37,4 +37,6 @@
       <ion-col size="4"></ion-col>
     </ion-row>
   </ion-grid>
+
+  <button class="button" [routerLink]="['/events/select-category']">GO BACK TO EVENTS</button>
 </ion-content>

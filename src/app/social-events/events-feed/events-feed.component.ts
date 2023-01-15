@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { EventType } from '../models/event-type.model';
 
 import { Event } from '../models/event.model';
@@ -14,7 +15,7 @@ export class EventsFeedComponent implements OnInit {
 
   category!: EventType;
 
-  constructor(private eventService: EventService) {}
+  constructor(private eventService: EventService, private router: Router) {}
 
   ngOnInit(): void {
     this.category = this.eventService.getCategory();
@@ -22,5 +23,9 @@ export class EventsFeedComponent implements OnInit {
       .getAll()
       .filter((event) => event.type === this.category);
     console.log(this.events);
+  }
+
+  navigateToEventDetails(event: Event): void {
+    this.router.navigate(['/events/join'], { queryParams: { id: event.id } });
   }
 }

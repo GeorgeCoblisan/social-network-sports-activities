@@ -1,5 +1,6 @@
 ion-content {
     --ion-background-color: white;
+    height: auto;
 }
 
 .avatar-image {
@@ -94,7 +95,7 @@ ion-content {
 }
 
 .content .events-list ion-card {
-    --background: #92949c;
+    --background: #f4f5f8;
     --color: black;
     height: 180px;
 }

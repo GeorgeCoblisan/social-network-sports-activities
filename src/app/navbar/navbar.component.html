@@ -1,5 +1,5 @@
 <nav class="navbar">
-  <div class="navbar__add-icon">
+  <div class="navbar__add-icon" [routerLink]="['/events/create']">
     <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="white" class="bi bi-plus-square"
       viewBox="0 0 16 16">
       <path
@@ -8,8 +8,8 @@
     </svg>
   </div>
   <div class="navbar__icon-wrapper">
-      <img class="navbar__icon navbar__icon--short" src="../../assets/Home.svg" [routerLink]="['/home']" alt="home">
-      <img class="navbar__icon navbar__icon--long" src="../../assets/Category.svg" alt="category" [routerLink]="['/events/select-category']">
+      <img class="navbar__icon navbar__icon--short" src="../../assets/Home.svg" [routerLink]="['/events/select-category']" alt="home">
+      <img class="navbar__icon navbar__icon--long" src="../../assets/Category.svg" alt="category" [routerLink]="['/events/discover']">
       <img class="navbar__icon navbar__icon--short" src="../../assets/Bell.svg" alt="bell" [routerLink]="['/events/activity']">
       <img class="navbar__icon" src="../../assets/Profile.svg" alt="profile" [routerLink]="['/account/profile']">
 

@@ -12,9 +12,9 @@
   </div>
 
   <div class="events">
-    <ion-card *ngFor="let event of events">
+    <ion-card *ngFor="let event of events" (click)="navigateToEventDetails(event)">
       <ion-row>
-        <ion-card-title>{{ event.user.name }}</ion-card-title>
+        <ion-card-title>{{ event.user[0].name }}</ion-card-title>
         <ion-card-subtitle>{{ event.date | date: 'yyyy/MM/dd' }}</ion-card-subtitle>
       </ion-row>
       <img alt="Event imge" src="../../../assets/volei.png" class="event-image"e/>

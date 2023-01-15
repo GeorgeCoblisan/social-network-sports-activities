@@ -10,3 +10,25 @@ ion-content {
 .top-100 {
   margin-top: 100px;
 }
+
+p {
+  color: black;
+}
+
+ion-content {
+  --ion-background-color: white;
+}
+
+.button{
+  position: relative;
+  background-color: #5151C6;
+  border: 1px solid #5151C6;
+  border-radius: 20px;
+  color: white;
+  width: 300px;
+  height: 50px;
+  margin-top: 50px;
+  margin-left: 40px;
+  font-weight: bold;
+  font-family: 'Circular Std';
+}

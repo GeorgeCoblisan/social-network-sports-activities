@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {EventService} from "../services/event.service";
 import {Event} from "../models/event.model";
 import { EventType } from '../models/event-type.model';
@@ -16,7 +16,9 @@ export class EventsJoinComponent implements OnInit {
   event!: Event;
 
   constructor(private readonly activatedRoute: ActivatedRoute,
-              private readonly eventService: EventService) { }
+              private readonly eventService: EventService,
+              private router: Router,
+              ) { }
 
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe(params => {
@@ -25,4 +27,7 @@ export class EventsJoinComponent implements OnInit {
     });
   }
 
+  joinEvent(event: Event): void {
+    this.router.navigate(['/events/reward'], { queryParams: { id: event.id } });
+  }
 }

@@ -8,7 +8,7 @@
 
 <ion-content class="content" [fullscreen]="true">
   <div class="header">
-    <h3>@ {{ userEmail }}</h3>
+    <h3>@ {{ user.email }}</h3>
     <ion-img src="../../assets/Header background.png" alt="Header-background"></ion-img>
     <ion-img
       src="../../assets/Avatar.png"
@@ -18,30 +18,30 @@
   </div>
 
   <div class="content">
-    <span class="span-1">{{ userName }}</span>
+    <span class="span-1">{{ user.name }}</span>
     <span class="span-2">Romania, Cluj</span>
     <div class="follow-cards">
       <ion-card>
-        <ion-card-title>220 Followers</ion-card-title>
+        <ion-card-title>XP {{ user.xp }}</ion-card-title>
       </ion-card>
       <ion-card>
-        <ion-card-title>150 Following</ion-card-title>
+        <ion-card-title>Level {{ user.level }}</ion-card-title>
       </ion-card>
     </div>
     <span class="span-3">Events</span>
     <div class="participating-cards">
       <ion-card>
-        <ion-card-title>1 going to</ion-card-title>
+        <ion-card-title (click)="seeToGoEvents()">{{ eventsToGo }} going to</ion-card-title>
       </ion-card>
       <ion-card>
-        <ion-card-title>10 participated</ion-card-title>
+        <ion-card-title (click)="seeParticipatedEvents()">{{ eventsParticipated }} participated</ion-card-title>
       </ion-card>
     </div>
-    <div class="events-list">
-      <ion-card>
+    <div class="events-list" *ngIf="eventsSelected === true">
+      <ion-card *ngFor="let event of events">
         <img alt="Event imge" src="../../../assets/volei.png" class="event-image"e/>
-        <ion-card-title>Campionatul de volei</ion-card-title>
-        <ion-card-content>16/12/2020</ion-card-content>
+        <ion-card-title>{{ event.name }}</ion-card-title>
+        <ion-card-content>{{ event.date | date: 'yyyy/MM/dd' }}</ion-card-content>
       </ion-card>
     </div>
   </div>
