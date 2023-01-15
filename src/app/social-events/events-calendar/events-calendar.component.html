@@ -5,10 +5,6 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  <ion-datetime
-    [(ngModel)]="date"
-    [max]="maxDate"
-  >
-  </ion-datetime>
+<ion-content [fullscreen]="true">
+  <full-calendar #calendar [options]="calendarOptions"></full-calendar>
 </ion-content>
