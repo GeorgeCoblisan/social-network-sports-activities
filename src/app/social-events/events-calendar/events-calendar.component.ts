@@ -18,6 +18,10 @@ export class EventsCalendarComponent implements OnInit, AfterViewInit {
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin],
+    eventColor: '#bc0000',
+    eventTextColor: '#bc0000',
+    eventBackgroundColor: '#bc0000',
+    eventBorderColor: '#bc0000',
     eventClick: this.handleEvent.bind(this)
   };
 

@@ -48,7 +48,49 @@ export class EventService {
       likes: 5,
       totalSeats: 12,
       occupiedSeats: 5,
-    }
+    },
+    {
+      id: 3,
+      name: 'Event 3',
+      image: 'string',
+      date: 1673697715000,
+      type: EventType.Running,
+      user: [{
+        name: 'Darius',
+        email: 'darius@gmail.com',
+        password: 'darius',
+      }],
+      location: {
+        address: 'BT Arena',
+        latitude: 46.767052,
+        longitude: 23.570519
+      },
+      comments: 3,
+      likes: 12,
+      totalSeats: 12,
+      occupiedSeats: 10,
+    },
+    {
+      id: 4,
+      name: 'Event 4',
+      image: 'string',
+      date: 1674043315000,
+      user: [{
+        name: 'Darius',
+        email: 'darius@gmail.com',
+        password: 'darius',
+      }],
+      location: {
+        address: 'Parcul sala sporturilor',
+        latitude: 46.765468,
+        longitude: 23.561321
+      },
+      type: EventType.Tennis,
+      comments: 5,
+      likes: 9,
+      totalSeats: 12,
+      occupiedSeats: 5,
+    },
   ];
 
   selectedCategory!: EventType;

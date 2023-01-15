@@ -1,4 +1,9 @@
 <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 
@@ -77,5 +82,8 @@
     </div>
   </div>
 
+  <div class="sports">
+    <button class="sports__button" [routerLink]="['/events/calendar']">EXPLORE ON CALENDAR</button>
+  </div>
   <app-navbar></app-navbar>
 </ion-content>

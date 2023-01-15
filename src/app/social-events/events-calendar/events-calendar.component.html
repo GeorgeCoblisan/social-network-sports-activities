@@ -3,8 +3,15 @@
     <ion-title>
       Events calendar
     </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
   <full-calendar #calendar [options]="calendarOptions"></full-calendar>
 </ion-content>
+
+<div class="navbar">
+  <app-navbar></app-navbar>
+</div>

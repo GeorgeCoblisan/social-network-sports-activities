@@ -11,9 +11,10 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { ProfileComponent } from './profile/profile.component';
 import { ChatComponent } from './chat/chat.component';
 import {NavbarModule} from "../navbar/navbar.module";
+import { SocialEventsModule } from '../social-events/social-events.module';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule, AccountRoutingModule, NavbarModule],
+  imports: [CommonModule, FormsModule, IonicModule, AccountRoutingModule, NavbarModule, SocialEventsModule],
   declarations: [
     LoginComponent,
     SignupComponent,
