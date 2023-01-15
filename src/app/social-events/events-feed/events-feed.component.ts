@@ -19,7 +19,7 @@ export class EventsFeedComponent implements OnInit {
   ngOnInit(): void {
     this.category = this.eventService.getCategory();
     this.events = this.eventService
-      .getEvents()
+      .getAll()
       .filter((event) => event.type === this.category);
     console.log(this.events);
   }

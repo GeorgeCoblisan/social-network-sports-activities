@@ -6,6 +6,7 @@ import {EventService} from "../services/event.service";
 import {Location} from "../models/location";
 import {LocationService} from "../services/location.service";
 import {ToastController} from "@ionic/angular";
+import { AccountService } from 'src/app/account/services/account.service';
 
 @Component({
   selector: 'app-create-event',
@@ -23,7 +24,9 @@ export class CreateEventComponent implements OnInit {
   constructor(private readonly formBuilder: FormBuilder,
               private readonly eventService: EventService,
               private readonly locationService: LocationService,
-              private toastController: ToastController) { }
+              private toastController: ToastController,
+              private accountService: AccountService,
+              ) { }
 
   ngOnInit() {
     this.initFormBuilder();
@@ -48,6 +51,7 @@ export class CreateEventComponent implements OnInit {
         image: 'string',
         date: this.eventDate,
         type: this.eventFormGroup.get('type').value,
+        user: this.accountService.getUser(),
         location: this.eventFormGroup.get('location').value,
         comments: 0,
         likes: 0,
