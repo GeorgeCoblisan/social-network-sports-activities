@@ -46,7 +46,7 @@ const routes: Routes = [
     component: EventDetailsComponent,
   },
   {
-    path: 'create-event',
+    path: 'create',
     component: CreateEventComponent,
   },
   {
@@ -72,7 +72,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes)
+  ],
   exports: [RouterModule]
 })
 export class SocialEventsRoutingModule {}
