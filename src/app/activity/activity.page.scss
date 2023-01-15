@@ -1,0 +1,151 @@
+ion-content {
+  --ion-background-color: white;
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+
+  width: 100%;
+  background-color: white;
+  padding: 10px 16px;
+
+  &__settings {
+    width: 24px;
+    height: 24px;
+    border-radius: 10px;
+
+    transition: 0.2s;
+
+    &:active{
+      background-color: #5151c670;
+    }
+  }
+
+  &__text {
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.1px;
+
+    color: #000000;
+
+    &--purple {
+      color: #6b6cdb
+    }
+  }
+}
+
+.activities {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+
+  margin: 75px 0 105px 0;
+  width: 100%;
+  padding: 5px 14px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  padding: 14px;
+  margin: 0 0 14px 0;
+  width: 347px;
+  height: 121px;
+  background: #F1F1FE;
+  border-radius: 10px;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-left: 14px;
+    height: 100%;
+    width: 212px;
+  }
+
+  &__user {
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: justify;
+    letter-spacing: -0.1px;
+    color: #212121;
+  }
+
+  &__info {
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: -0.1px;
+    color: #212121;
+  }
+
+  &__time {
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: justify;
+    letter-spacing: -0.1px;
+    color: #BDBDBD;
+  }
+
+  &__picture {
+    margin-left: 14px;
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px 6px;
+
+    box-sizing: border-box;
+    width: 47px;
+    height: 32px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    border: 2px solid;
+    border-color: #5151C6 ;
+
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.1px;
+    color: #5151C6 ;
+
+    transition: 0.2s;
+
+    &:active{
+      background-color: #5151c64f;
+    }
+  }
+}
