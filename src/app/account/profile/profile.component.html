@@ -33,10 +33,10 @@
     <span class="span-3">Events</span>
     <div class="participating-cards">
       <ion-card>
-        <ion-card-title (click)="seeToGoEvents()">{{ eventsToGo }} going to</ion-card-title>
+        <ion-card-title (click)="seeToGoEvents()">{{ eventsToGo }} participated</ion-card-title>
       </ion-card>
       <ion-card>
-        <ion-card-title (click)="seeParticipatedEvents()">{{ eventsParticipated }} participated</ion-card-title>
+        <ion-card-title (click)="seeParticipatedEvents()">{{ eventsParticipated }} going to</ion-card-title>
       </ion-card>
     </div>
     <div class="events-list" *ngIf="eventsSelected === true">
